@@ -1,20 +1,16 @@
 import numpy as np
 
-
-def normnumber(value):
+@np.vectorize
+def clean_values(value):
     """
     Process data. Expects a list of lists with numbers.
     * normalises a number
     """
 
     if value == -9999:
-        value = 0
-    else:
-        value /= 9999
+        value = 2200
 
     return value
-
-normnumber = np.vectorize(normnumber)
 
 def normalize(data):
     """
@@ -22,8 +18,11 @@ def normalize(data):
 
     * apply normnumber function to the array
     """
+    # Set invalid values to 2200
+    data = clean_values(data)
 
-    data = normnumber(data)
+    # Normalize it!
+    data = data / np.max(data)
 
     return data
 
