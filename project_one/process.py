@@ -10,3 +10,8 @@ def process_data(data):
     """
     # Convert to Numpy float32
     data = np.array(data, np.float32)
+
+    # Rotate the array by 90 degrees
+    data = np.rot90(data)
+
+    return data
