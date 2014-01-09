@@ -19,9 +19,9 @@ def plot_data(data):
     # This is the data
     Z = data
 
-    surf = ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=cm.coolwarm,
-            linewidth=0, antialiased=False)
-    #ax.set_zlim(-1.01, 1.01)
+    surf = ax.plot_surface(
+        X, Y, Z, rstride=1, cstride=1, cmap=cm.coolwarm,
+        linewidth=0, antialiased=False)
 
     ax.zaxis.set_major_locator(LinearLocator(10))
     ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))

@@ -8,19 +8,14 @@ def clean_values(value):
     """
 
     if value == -9999:
-        value = 2200
+        value = np.NaN
 
     return value
 
 def normalize(data):
     """
     Process data. Expects a list of lists with numbers.
-
-    * apply normnumber function to the array
     """
-    # Set invalid values to 2200
-    data = clean_values(data)
-
     # Normalize it!
     data = data / np.max(data)
 
@@ -36,8 +31,7 @@ def process_data(data):
     # Convert to Numpy float32
     data = np.array(data, np.float32)
 
-    # Rotate the array by 90 degrees
-    data = np.rot90(data)
+    data = clean_values(data)
 
     return data
 
