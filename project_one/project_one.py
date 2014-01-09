@@ -1,4 +1,4 @@
-from input import import_data
+from import_data import import_data
 from process import process_data
 
 
