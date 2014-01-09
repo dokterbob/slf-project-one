@@ -6,7 +6,7 @@ from matplotlib.ticker import LinearLocator, FormatStrFormatter
 import matplotlib.pyplot as plt
 import numpy as np
 
-def plot_my_data(data):
+def plot_data(data):
     # Create figure
     fig = plt.figure()
 
