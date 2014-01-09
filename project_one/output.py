@@ -1,16 +1,16 @@
-from mpl_toolkits.mplot3d import Axes3D
-
 from matplotlib import cm
 from matplotlib.ticker import LinearLocator, FormatStrFormatter
 
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D #<-- Note the capitalization
 import numpy as np
 
-def plot_my_data(data):
+
+def plot_data(data):
     # Create figure
     fig = plt.figure()
 
-    ax = fig.gca(projection='3d')
+    ax = Axes3D(fig)
 
     X = np.arange(0, data.shape[0], 1.0)
     Y = np.arange(0, data.shape[1], 1.0)
@@ -29,4 +29,3 @@ def plot_my_data(data):
     fig.colorbar(surf, shrink=0.5, aspect=5)
 
     plt.show()
-
