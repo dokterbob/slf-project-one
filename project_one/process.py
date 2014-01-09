@@ -12,7 +12,9 @@ def process_data(data):
     data = np.array(data, np.float32)
 
     # Normalise data
-    data /= 9999
+    if data == -9999:
+        data = 0
+    else: data /= 9999
 
     # Rotate the array by 90 degrees
     data = np.rot90(data)
