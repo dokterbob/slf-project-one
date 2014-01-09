@@ -12,8 +12,8 @@ def plot_data(data):
 
     ax = Axes3D(fig)
 
-    X = np.arange(0, data.shape[0], 1.0)
-    Y = np.arange(0, data.shape[1], 1.0)
+    X = np.arange(0, data.shape[1], 1.0)
+    Y = np.arange(0, data.shape[0], 1.0)
     X, Y = np.meshgrid(X, Y)
 
     # This is the data
