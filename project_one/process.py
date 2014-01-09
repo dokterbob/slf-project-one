@@ -15,3 +15,19 @@ def process_data(data):
     data = np.rot90(data)
 
     return data
+
+def rotate_data(data):
+    """
+    Rotate data. Requires numpy 2D array.
+    """
+    if 'ndarray' in str(type(data)) == 'False':
+        data = process_data(data)
+
+    #ask user what he wants
+    nrotation = raw_input("How many 90deg rotations you want? (e.g. -1 for 90deg clockwise) ")
+    nrotation = int(nrotation)
+
+    #do what he is up for!
+    data = np.rot90(data, nrotation)
+
+    return data
