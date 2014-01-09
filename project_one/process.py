@@ -11,6 +11,9 @@ def process_data(data):
     # Convert to Numpy float32
     data = np.array(data, np.float32)
 
+    # Normalise data
+    data /= 9999
+
     # Rotate the array by 90 degrees
     data = np.rot90(data)
 
