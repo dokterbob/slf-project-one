@@ -5,7 +5,8 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D #<-- Note the capitalization
 import numpy as np
 
-def display_data(data):
+
+def plot_data(data):
     # Create figure
     fig = plt.figure()
 
@@ -28,4 +29,3 @@ def display_data(data):
     fig.colorbar(surf, shrink=0.5, aspect=5)
 
     plt.show()
-
